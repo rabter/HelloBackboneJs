@@ -7,7 +7,13 @@ define([
 
 	var HomeView = Backbone.View.extend({
 		el: $("#content"),
-
+		events: {
+			"click #btn1": "drawData"
+		},
+		drawData: function(e) { 
+			alert('Click Button');
+			
+		},
 		render: function() {
 			console.log('#5 HomeView.js');
 			this.$el.html(homeTemplate)
